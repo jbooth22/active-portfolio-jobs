@@ -364,9 +364,25 @@ async function scrapeCustomHtml(company, careersUrl){
     if (!allowPath.test(u.pathname)) continue;
     if (u.pathname.replace(/\/+$/,'') === new URL(careersUrl).pathname.replace(/\/+$/,'')) continue;
 
-    const title = clean(a.text);
+    let title = clean(a.text);
+
+    // Trim obvious job-description bleed like:
+    // "AI EngineerAs an AI Engineer, you’ll..."
+    title = title
+      .split(/\bAs (an|a|our)\b/i)[0]   // cut off description starts
+      .split("•")[0]
+      .split("|")[0]
+      .split("—")[0]
+      .trim();
+    
+    // If still very long, aggressively shorten
+    if (title.length > 80) {
+      title = title.split(/\s+/).slice(0, 10).join(" ").trim();
+    }
+    
     if (!title || title.length < 6) continue;
     if (title.split(/\s+/).length < 2) continue;
+
 
     if (seen.has(url)) continue;
     seen.add(url);
