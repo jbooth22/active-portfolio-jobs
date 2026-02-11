@@ -1,0 +1,15 @@
+{
+  "name": "active-portfolio-jobs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node src/scrape.mjs",
+    "build-site": "node src/build_site.mjs",
+    "update": "node src/scrape.mjs && node src/build_site.mjs"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "node-html-parser": "^6.1.13",
+    "playwright": "^1.50.1"
+  }
+}
