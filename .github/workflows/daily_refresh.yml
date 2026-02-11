@@ -37,14 +37,16 @@ jobs:
       - name: Run refresh
         run: bun run update
 
-      - name: Commit and push changes
+          - name: Commit and push changes
         run: |
           set -e
+          BRANCH="${GITHUB_REF_NAME}"
+
           git config user.name "active-portfolio-jobs-bot"
           git config user.email "active-portfolio-jobs-bot@users.noreply.github.com"
 
-          # Always rebase on latest main BEFORE creating a commit.
-          git pull --rebase origin main
+          # Rebase on the latest version of whatever branch triggered this run
+          git pull --rebase origin "$BRANCH"
 
           git add -A
           if git diff --cached --quiet; then
@@ -53,4 +55,4 @@ jobs:
           fi
 
           git commit -m "chore: daily jobs refresh"
-          git push origin HEAD:main
+          git push origin HEAD:"$BRANCH"
