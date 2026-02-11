@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Active Capital — Portfolio Jobs</title>
+  <style>
+    :root { --bg: #0b0f14; --card: #111827; --text: #e5e7eb; --muted: #9ca3af; --line: #1f2937; --brand: #7c3aed; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+    a { color: #93c5fd; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:flex-end; justify-content:space-between; gap: 16px; flex-wrap: wrap; }
+    h1 { margin:0; font-size: 22px; letter-spacing: .2px; }
+    .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+    .pill { display:inline-block; padding: 6px 10px; border:1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted); }
+    .controls { display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
+    input, select { background: var(--card); color: var(--text); border:1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
+    .card { background: var(--card); border:1px solid var(--line); border-radius: 16px; padding: 14px; }
+    .row { display:flex; gap: 12px; justify-content:space-between; align-items:flex-start; }
+    .company { font-weight: 650; }
+    .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { text-align:left; padding: 10px 8px; border-top:1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 12px; }
+    td { font-size: 14px; }
+    .tag { display:inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; border:1px solid var(--line); color: var(--muted); }
+    .right { text-align:right; }
+    .small { font-size: 12px; color: var(--muted); }
+    .btn { display:inline-block; padding: 8px 10px; border:1px solid var(--line); border-radius: 12px; color: var(--text); background: transparent; }
+    .btn:hover { border-color: #334155; text-decoration:none; }
+    .warn { color: #fbbf24; }
+    .bad { color: #f87171; }
+    .good { color: #34d399; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Active Capital — Portfolio Jobs</h1>
+        <div class="sub">Aggregated open roles from Active Capital portfolio company career pages.</div>
+      </div>
+      <div class="controls">
+        <input id="q" placeholder="Search title / company / location" size="28" />
+        <select id="companyFilter"><option value="">All companies</option></select>
+        <select id="locationFilter">
+          <option value="">All locations</option>
+          <option value="Remote">Remote</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="On-site">On-site</option>
+        </select>
+        <a class="btn" id="shareX" target="_blank" rel="noreferrer">Share on X</a>
+        <a class="btn" id="shareLI" target="_blank" rel="noreferrer">Share on LinkedIn</a>
+      </div>
+    </header>
+
+    <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+      <span class="pill" id="counts">Loading…</span>
+      <span class="pill" id="updated">Updated: …</span>
+      <span class="pill" id="coverage">Coverage: …</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="row">
+          <div>
+            <div class="company">Open roles</div>
+            <div class="meta">Clean job titles + best-effort locations. If something looks off, the “Company coverage” section explains why.</div>
+          </div>
+        </div>
+        <div style="overflow:auto;">
+          <table id="jobsTbl">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Location</th>
+                <th class="right">Link</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="small" style="margin-top:10px;">Tip: filter by company, then share. This page is public and easy to forward.</div>
+      </div>
+
+      <div class="card">
+        <div class="row">
+          <div>
+            <div class="company">Company coverage</div>
+            <div class="meta">Shows which sources were scraped successfully, which were empty, and which are currently unsupported.</div>
+          </div>
+        </div>
+        <div style="overflow:auto;">
+          <table id="covTbl">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th class="right">Open roles</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+
+  function enc(u){ return encodeURIComponent(u); }
+
+  function statusBadge(status){
+    const s = (status||"").toLowerCase();
+    if (s === "ok") return `<span class="tag good">ok</span>`;
+    if (s === "empty") return `<span class="tag warn">empty</span>`;
+    if (s === "unsupported") return `<span class="tag warn">unsupported</span>`;
+    if (s === "failed") return `<span class="tag bad">failed</span>`;
+    return `<span class="tag">${status||""}</span>`;
+  }
+
+  async function loadJson(p){
+    const r = await fetch(p, { cache: "no-store" });
+    if (!r.ok) throw new Error(`Failed to load ${p}`);
+    return r.json();
+  }
+
+  function uniq(arr){ return [...new Set(arr)].filter(Boolean); }
+
+  function renderJobs(rows){
+    const tbody = $("jobsTbl").querySelector("tbody");
+    tbody.innerHTML = "";
+    for (const j of rows){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${j.company_name}</td>
+        <td>${j.job_title}</td>
+        <td>${j.job_location || "Not listed"}</td>
+        <td class="right"><a href="${j.job_url}" target="_blank" rel="noreferrer">Apply</a></td>
+      `;
+      tbody.appendChild(tr);
+    }
+    if (rows.length === 0){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td colspan="4" class="small">No roles match your filters.</td>`;
+      tbody.appendChild(tr);
+    }
+  }
+
+  function renderCoverage(rows){
+    const tbody = $("covTbl").querySelector("tbody");
+    tbody.innerHTML = "";
+    for (const c of rows){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td><a href="${c.company_careers_url}" target="_blank" rel="noreferrer">${c.company_name}</a></td>
+        <td>${c.source_type || ""}</td>
+        <td>${statusBadge(c.status)}</td>
+        <td class="right">${c.open_roles_raw ?? 0}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+  }
+
+  function applyFilters(state){
+    const q = $("q").value.trim().toLowerCase();
+    const c = $("companyFilter").value;
+    const loc = $("locationFilter").value;
+
+    let rows = state.jobs;
+    if (c) rows = rows.filter(r => r.company_name === c);
+    if (loc) rows = rows.filter(r => (r.job_location || "").toLowerCase().includes(loc.toLowerCase()));
+    if (q){
+      rows = rows.filter(r => [r.company_name, r.job_title, r.job_location].join(" ").toLowerCase().includes(q));
+    }
+
+    renderJobs(rows);
+
+    const total = state.jobs.length;
+    $("counts").textContent = `${rows.length} shown · ${total} total roles`;
+
+    const shareText = c
+      ? `Active Capital portfolio jobs at ${c}: ${rows.length} open roles.`
+      : `Active Capital portfolio jobs: ${total} open roles across ${state.companyCount} companies.`;
+    const shareUrl = window.location.href;
+
+    $("shareX").href = `https://twitter.com/intent/tweet?text=${enc(shareText)}&url=${enc(shareUrl)}`;
+    $("shareLI").href = `https://www.linkedin.com/sharing/share-offsite/?url=${enc(shareUrl)}`;
+  }
+
+  (async function init(){
+    const [jobs, coverage, last] = await Promise.all([
+      loadJson("./jobs.json"),
+      loadJson("./coverage.json").catch(() => []),
+      loadJson("./last_updated.json").catch(() => ({ last_updated_utc: "" }))
+    ]);
+
+    const companyNames = uniq(jobs.map(j => j.company_name)).sort((a,b)=>a.localeCompare(b));
+    const select = $("companyFilter");
+    for (const name of companyNames){
+      const opt = document.createElement("option");
+      opt.value = name;
+      opt.textContent = name;
+      select.appendChild(opt);
+    }
+
+    const companyCount = uniq(coverage.map(c => c.company_name)).length || uniq(jobs.map(j=>j.company_name)).length;
+
+    renderCoverage(coverage);
+
+    $("updated").textContent = `Updated: ${last.last_updated_utc || "(unknown)"}`;
+
+    const ok = coverage.filter(c => c.status === "ok").length;
+    const empty = coverage.filter(c => c.status === "empty").length;
+    const unsupported = coverage.filter(c => c.status === "unsupported").length;
+    const failed = coverage.filter(c => c.status === "failed").length;
+    $("coverage").textContent = `Coverage: ok ${ok} · empty ${empty} · unsupported ${unsupported} · failed ${failed}`;
+
+    const state = { jobs, coverage, companyCount };
+
+    ["q","companyFilter","locationFilter"].forEach(id => {
+      $(id).addEventListener("input", () => applyFilters(state));
+      $(id).addEventListener("change", () => applyFilters(state));
+    });
+
+    applyFilters(state);
+  })().catch(err => {
+    console.error(err);
+    $("counts").textContent = "Error loading data.";
+  });
+</script>
+</body>
+</html>
