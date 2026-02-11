@@ -341,10 +341,6 @@ async function scrapeScalis(company, careersUrl){
   }
 }
 
-  const seen = new Set();
-  return out.filter(j => (seen.has(j.job_url) ? false : (seen.add(j.job_url), true)));
-}
-
 async function scrapeCustomHtml(company, careersUrl){
   const { ok, text, status } = await fetchText(careersUrl);
   if (!ok) throw new Error(`Custom HTML fetch failed: ${status}`);
