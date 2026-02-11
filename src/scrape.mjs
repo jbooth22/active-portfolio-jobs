@@ -425,7 +425,7 @@ async function main(){
       else if (source === "ashby") jobs = await scrapeAshby(c.company_name, c.careers_url);
       else if (source === "workday") jobs = await scrapeWorkday(c.company_name, c.careers_url);
       else if (source === "scalis") jobs = await scrapeScalis(c.company_name, c.careers_url);
-      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url) {
+      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url);
         status = "unsupported";
         jobs = [];
       } else {
