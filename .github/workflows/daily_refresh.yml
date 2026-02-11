@@ -37,7 +37,7 @@ jobs:
       - name: Run refresh
         run: bun run update
 
-          - name: Commit and push changes
+      - name: Commit and push changes
         run: |
           set -e
           BRANCH="${GITHUB_REF_NAME}"
@@ -45,7 +45,6 @@ jobs:
           git config user.name "active-portfolio-jobs-bot"
           git config user.email "active-portfolio-jobs-bot@users.noreply.github.com"
 
-          # Rebase on the latest version of whatever branch triggered this run
           git pull --rebase origin "$BRANCH"
 
           git add -A
