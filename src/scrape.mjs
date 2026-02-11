@@ -31,7 +31,7 @@ function detectSource(url){
   if (u.includes("breezy.hr")) return "breezy";
   if (u.includes("builtinaustin.com")) return "built_in";
   if (u.includes("scalis.ai")) return "scalis";
-  if (u.includes("notion.site")) return "notion";
+  if (u.includes("notion.site")) return "custom_html";
   return "custom_html";
 }
 
@@ -238,20 +238,23 @@ async function scrapeWorkday(company, careersUrl){
   const browser = await chromium.launch();
   const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
   try {
-    await page.goto(careersUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.goto(careersUrl, { waitUntil: "networkidle", timeout: 60000 });
     await page.waitForTimeout(1500);
 
+    // Workday job links almost always contain "/job/" (singular)
     const jobs = await page.evaluate(() => {
-      const anchors = Array.from(document.querySelectorAll('a[href]'));
+      const anchors = Array.from(document.querySelectorAll('a[href*="/job/"]'));
       const out = [];
       for (const a of anchors){
         const href = a.getAttribute('href') || '';
         if (!href) continue;
+
         const url = new URL(href, window.location.href).toString();
         if (new URL(url).origin !== window.location.origin) continue;
-        if (!/\/(job|jobs)\//i.test(url)) continue;
+
         const title = (a.textContent || '').replace(/\s+/g,' ').trim();
         if (!title || title.length < 3) continue;
+
         out.push({ url, title });
       }
       return out;
@@ -284,35 +287,89 @@ async function scrapeWorkday(company, careersUrl){
   }
 }
 
-async function scrapeScalis(company, careersUrl){
-  // The embed page is often static enough to parse without Playwright
-  const { ok, text, status } = await fetchText(careersUrl);
-  if (!ok) throw new Error(`Scalis fetch failed: ${status}`);
-  const root = parseHtml(text);
-  const anchors = root.querySelectorAll("a[href]");
-  const out = [];
+    const out = [];
+    const seen = new Set();
+    for (const j of jobs){
+      if (seen.has(j.url)) continue;
+      seen.add(j.url);
+      out.push({
+        portfolio: "Active Capital",
+        company_name: company,
+        company_careers_url: careersUrl,
+        job_title: clean(j.title),
+        job_location: "Not listed",
+        job_url: j.url,
+        source_type: "workday",
+        source_job_id: sha1(j.url),
+        job_key: `workday:${sha1(j.url)}`,
+        status: "open",
+        last_seen_utc: new Date().toISOString(),
+      });
+    }
 
-  for (const a of anchors){
-    const href = a.getAttribute("href") || "";
-    const url = absUrl(careersUrl, href);
-    if (!url || !sameOriginOnly(careersUrl, url)) continue;
-    if (!/\/job\//i.test(url)) continue;
-    const title = clean(a.text);
-    if (!title) continue;
-    out.push({
-      portfolio: "Active Capital",
-      company_name: company,
-      company_careers_url: careersUrl,
-      job_title: title,
-      job_location: "Not listed",
-      job_url: url,
-      source_type: "scalis",
-      source_job_id: sha1(url),
-      job_key: `scalis:${sha1(url)}`,
-      status: "open",
-      last_seen_utc: new Date().toISOString(),
-    });
+    return out;
+  } finally {
+    await page.close().catch(()=>{});
+    await browser.close().catch(()=>{});
   }
+}
+
+async function scrapeScalis(company, careersUrl){
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
+
+  try {
+    await page.goto(careersUrl, { waitUntil: "networkidle", timeout: 60000 });
+    await page.waitForTimeout(1500);
+
+    const jobs = await page.evaluate(() => {
+      const anchors = Array.from(document.querySelectorAll('a[href*="/job/"]'));
+      const out = [];
+      for (const a of anchors){
+        const href = a.getAttribute("href") || "";
+        if (!href) continue;
+
+        const url = new URL(href, window.location.href).toString();
+        if (new URL(url).origin !== window.location.origin) continue;
+
+        // Scalis job URLs are /job/<uuid>
+        if (!/\/job\/[0-9a-f-]{20,}/i.test(url)) continue;
+
+        const title = (a.textContent || "").replace(/\s+/g, " ").trim();
+        if (!title || title.length < 3) continue;
+
+        out.push({ url, title });
+      }
+      return out;
+    });
+
+    const out = [];
+    const seen = new Set();
+    for (const j of jobs){
+      if (seen.has(j.url)) continue;
+      seen.add(j.url);
+
+      out.push({
+        portfolio: "Active Capital",
+        company_name: company,
+        company_careers_url: careersUrl,
+        job_title: clean(j.title),
+        job_location: "Not listed",
+        job_url: j.url,
+        source_type: "scalis",
+        source_job_id: sha1(j.url),
+        job_key: `scalis:${sha1(j.url)}`,
+        status: "open",
+        last_seen_utc: new Date().toISOString(),
+      });
+    }
+
+    return out;
+  } finally {
+    await page.close().catch(()=>{});
+    await browser.close().catch(()=>{});
+  }
+}
 
   const seen = new Set();
   return out.filter(j => (seen.has(j.job_url) ? false : (seen.add(j.job_url), true)));
@@ -324,10 +381,9 @@ async function scrapeCustomHtml(company, careersUrl){
   if (!ok) throw new Error(`Custom HTML fetch failed: ${status}`);
   const root = parseHtml(text);
 
-  // Extremely conservative: only keep same-origin links to likely job detail pages.
-  const allowPath = /(\/job\/|\/jobs\/|\/positions\/|\/careers\/[^\/]+\/?$)/i;
-  const blockPath = /(privacy|security|disclosure|login|signup|terms|cookie)/i;
-
+  const allowPath = /(\/job\/|\/jobs\/|\/positions\/|\/openings\/|\/careers\/|\/careers$)/i;
+  const blockPath = /(privacy|security|disclosure|login|signup|terms|cookie|press|blog|about|product|pricing)/i;
+  
   const anchors = root.querySelectorAll("a[href]");
   const out = [];
   const seen = new Set();
@@ -350,6 +406,9 @@ async function scrapeCustomHtml(company, careersUrl){
     if (seen.has(url)) continue;
     seen.add(url);
 
+    // Avoid obvious "company nav" links by requiring multi-word titles
+    if (title.split(/\s+/).length < 2) continue;
+    
     out.push({
       portfolio: "Active Capital",
       company_name: company,
@@ -401,8 +460,7 @@ async function main(){
       else if (source === "ashby") jobs = await scrapeAshby(c.company_name, c.careers_url);
       else if (source === "workday") jobs = await scrapeWorkday(c.company_name, c.careers_url);
       else if (source === "scalis") jobs = await scrapeScalis(c.company_name, c.careers_url);
-      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url);
-      else if (source === "notion") {
+      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url) {
         status = "unsupported";
         jobs = [];
       } else {
