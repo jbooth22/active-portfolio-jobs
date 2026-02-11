@@ -23,6 +23,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Sync branch
+        run: |
+          set -e
+          BRANCH="${GITHUB_REF_NAME}"
+          git pull --rebase origin "$BRANCH"
+
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -44,8 +50,6 @@ jobs:
 
           git config user.name "active-portfolio-jobs-bot"
           git config user.email "active-portfolio-jobs-bot@users.noreply.github.com"
-
-          git pull --rebase origin "$BRANCH"
 
           git add -A
           if git diff --cached --quiet; then
