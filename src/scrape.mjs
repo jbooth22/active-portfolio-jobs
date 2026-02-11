@@ -417,7 +417,7 @@ async function main(){
     let status = "ok";
     let error = "";
 
-    try {
+       try {
       if (source === "greenhouse") jobs = await scrapeGreenhouse(c.company_name, c.careers_url);
       else if (source === "rippling") jobs = await scrapeRippling(c.company_name, c.careers_url);
       else if (source === "breezy") jobs = await scrapeBreezy(c.company_name, c.careers_url);
@@ -426,13 +426,11 @@ async function main(){
       else if (source === "workday") jobs = await scrapeWorkday(c.company_name, c.careers_url);
       else if (source === "scalis") jobs = await scrapeScalis(c.company_name, c.careers_url);
       else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url);
-        status = "unsupported";
-        jobs = [];
-      } else {
+      else {
         status = "unsupported";
         jobs = [];
       }
-    } catch (e){
+    } catch (e) {
       status = "failed";
       error = String(e?.message || e);
       jobs = [];
