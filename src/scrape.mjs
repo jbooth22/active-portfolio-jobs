@@ -364,18 +364,26 @@ async function scrapeCustomHtml(company, careersUrl){
     if (!allowPath.test(u.pathname)) continue;
     if (u.pathname.replace(/\/+$/,'') === new URL(careersUrl).pathname.replace(/\/+$/,'')) continue;
 
-    let title = clean(a.text);
+   let title = clean(a.text);
 
-    // Trim obvious job-description bleed like:
-    // "AI EngineerAs an AI Engineer, you’ll..."
+    // If the title is glued to the description like "AI EngineerAs..."
+    title = title.replace(/([a-z])As\b/g, "$1 As");
+    
+    // Now trim description bleed
     title = title
-      .split(/\bAs (an|a|our)\b/i)[0]   // cut off description starts
+      .split(/\bAs (an|a|our)\b/i)[0]
+      .split(/\bAustin, or\b/i)[0] // Dreambase-specific: location starts
       .split("•")[0]
       .split("|")[0]
       .split("—")[0]
       .trim();
     
-    // If still very long, aggressively shorten
+    // If still too long, take first line-ish chunk
+    if (title.length > 80) {
+      title = title.split(/[.!?]/)[0].trim(); // take first sentence fragment
+    }
+    
+    // Final safety: cap words
     if (title.length > 80) {
       title = title.split(/\s+/).slice(0, 10).join(" ").trim();
     }
@@ -383,12 +391,6 @@ async function scrapeCustomHtml(company, careersUrl){
     if (!title || title.length < 6) continue;
     if (title.split(/\s+/).length < 2) continue;
 
-
-    if (seen.has(url)) continue;
-    seen.add(url);
-
-    // Avoid obvious "company nav" links by requiring multi-word titles
-    if (title.split(/\s+/).length < 2) continue;
     
     out.push({
       portfolio: "Active Capital",
