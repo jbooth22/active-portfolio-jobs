@@ -7,7 +7,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:26:44.801Z"
+    "last_checked_utc": "2026-02-11T23:46:43.183Z"
   },
   {
     "portfolio": "Active Capital",
@@ -17,7 +17,7 @@
     "status": "ok",
     "open_roles_raw": 20,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:26:50.360Z"
+    "last_checked_utc": "2026-02-11T23:46:47.410Z"
   },
   {
     "portfolio": "Active Capital",
@@ -27,7 +27,7 @@
     "status": "ok",
     "open_roles_raw": 21,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:26:52.357Z"
+    "last_checked_utc": "2026-02-11T23:46:49.319Z"
   },
   {
     "portfolio": "Active Capital",
@@ -37,7 +37,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:26:52.563Z"
+    "last_checked_utc": "2026-02-11T23:46:49.499Z"
   },
   {
     "portfolio": "Active Capital",
@@ -47,7 +47,7 @@
     "status": "ok",
     "open_roles_raw": 10,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:26:53.235Z"
+    "last_checked_utc": "2026-02-11T23:46:49.991Z"
   },
   {
     "portfolio": "Active Capital",
@@ -57,7 +57,7 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://slangai.scalis.ai/jobs/embed?page=1&limit=10\", waiting until \"networkidle\"\n",
-    "last_checked_utc": "2026-02-11T23:27:53.340Z"
+    "last_checked_utc": "2026-02-11T23:47:50.095Z"
   },
   {
     "portfolio": "Active Capital",
@@ -67,7 +67,7 @@
     "status": "ok",
     "open_roles_raw": 9,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:55.149Z"
+    "last_checked_utc": "2026-02-11T23:47:51.922Z"
   },
   {
     "portfolio": "Active Capital",
@@ -77,7 +77,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:55.277Z"
+    "last_checked_utc": "2026-02-11T23:47:52.078Z"
   },
   {
     "portfolio": "Active Capital",
@@ -87,7 +87,7 @@
     "status": "ok",
     "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:55.620Z"
+    "last_checked_utc": "2026-02-11T23:47:52.450Z"
   },
   {
     "portfolio": "Active Capital",
@@ -97,7 +97,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:55.736Z"
+    "last_checked_utc": "2026-02-11T23:47:52.675Z"
   },
   {
     "portfolio": "Active Capital",
@@ -107,7 +107,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:56.208Z"
+    "last_checked_utc": "2026-02-11T23:47:53.010Z"
   },
   {
     "portfolio": "Active Capital",
@@ -117,7 +117,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:56.300Z"
+    "last_checked_utc": "2026-02-11T23:47:53.513Z"
   },
   {
     "portfolio": "Active Capital",
@@ -127,7 +127,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:56.660Z"
+    "last_checked_utc": "2026-02-11T23:47:53.612Z"
   },
   {
     "portfolio": "Active Capital",
@@ -137,7 +137,7 @@
     "status": "ok",
     "open_roles_raw": 2,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:56.945Z"
+    "last_checked_utc": "2026-02-11T23:47:53.913Z"
   },
   {
     "portfolio": "Active Capital",
@@ -147,7 +147,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:57.159Z"
+    "last_checked_utc": "2026-02-11T23:47:54.081Z"
   },
   {
     "portfolio": "Active Capital",
@@ -157,7 +157,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:57.266Z"
+    "last_checked_utc": "2026-02-11T23:47:54.203Z"
   },
   {
     "portfolio": "Active Capital",
@@ -167,7 +167,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:57.362Z"
+    "last_checked_utc": "2026-02-11T23:47:54.379Z"
   },
   {
     "portfolio": "Active Capital",
@@ -177,7 +177,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:57.715Z"
+    "last_checked_utc": "2026-02-11T23:47:54.599Z"
   },
   {
     "portfolio": "Active Capital",
@@ -187,7 +187,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:58.175Z"
+    "last_checked_utc": "2026-02-11T23:47:55.034Z"
   },
   {
     "portfolio": "Active Capital",
@@ -197,7 +197,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:58.334Z"
+    "last_checked_utc": "2026-02-11T23:47:55.159Z"
   },
   {
     "portfolio": "Active Capital",
@@ -207,7 +207,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:58.490Z"
+    "last_checked_utc": "2026-02-11T23:47:55.408Z"
   },
   {
     "portfolio": "Active Capital",
@@ -217,7 +217,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:58.609Z"
+    "last_checked_utc": "2026-02-11T23:47:55.554Z"
   },
   {
     "portfolio": "Active Capital",
@@ -227,7 +227,7 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "Custom HTML fetch failed: 500",
-    "last_checked_utc": "2026-02-11T23:27:58.821Z"
+    "last_checked_utc": "2026-02-11T23:47:55.790Z"
   },
   {
     "portfolio": "Active Capital",
@@ -237,7 +237,7 @@
     "status": "ok",
     "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:58.915Z"
+    "last_checked_utc": "2026-02-11T23:47:56.169Z"
   },
   {
     "portfolio": "Active Capital",
@@ -247,7 +247,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-11T23:27:59.730Z"
+    "last_checked_utc": "2026-02-11T23:47:56.484Z"
   },
   {
     "portfolio": "Active Capital",
@@ -257,6 +257,6 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "Custom HTML fetch failed: 500",
-    "last_checked_utc": "2026-02-11T23:27:59.949Z"
+    "last_checked_utc": "2026-02-11T23:47:57.170Z"
   }
 ]
