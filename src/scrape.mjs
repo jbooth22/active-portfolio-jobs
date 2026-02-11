@@ -241,7 +241,6 @@ async function scrapeWorkday(company, careersUrl){
     await page.goto(careersUrl, { waitUntil: "networkidle", timeout: 60000 });
     await page.waitForTimeout(1500);
 
-    // Workday job links almost always contain "/job/" (singular)
     const jobs = await page.evaluate(() => {
       const anchors = Array.from(document.querySelectorAll('a[href*="/job/"]'));
       const out = [];
@@ -287,33 +286,6 @@ async function scrapeWorkday(company, careersUrl){
   }
 }
 
-    const out = [];
-    const seen = new Set();
-    for (const j of jobs){
-      if (seen.has(j.url)) continue;
-      seen.add(j.url);
-      out.push({
-        portfolio: "Active Capital",
-        company_name: company,
-        company_careers_url: careersUrl,
-        job_title: clean(j.title),
-        job_location: "Not listed",
-        job_url: j.url,
-        source_type: "workday",
-        source_job_id: sha1(j.url),
-        job_key: `workday:${sha1(j.url)}`,
-        status: "open",
-        last_seen_utc: new Date().toISOString(),
-      });
-    }
-
-    return out;
-  } finally {
-    await page.close().catch(()=>{});
-    await browser.close().catch(()=>{});
-  }
-}
-
 async function scrapeScalis(company, careersUrl){
   const browser = await chromium.launch();
   const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
@@ -331,8 +303,6 @@ async function scrapeScalis(company, careersUrl){
 
         const url = new URL(href, window.location.href).toString();
         if (new URL(url).origin !== window.location.origin) continue;
-
-        // Scalis job URLs are /job/<uuid>
         if (!/\/job\/[0-9a-f-]{20,}/i.test(url)) continue;
 
         const title = (a.textContent || "").replace(/\s+/g, " ").trim();
@@ -374,7 +344,6 @@ async function scrapeScalis(company, careersUrl){
   const seen = new Set();
   return out.filter(j => (seen.has(j.job_url) ? false : (seen.add(j.job_url), true)));
 }
-
 
 async function scrapeCustomHtml(company, careersUrl){
   const { ok, text, status } = await fetchText(careersUrl);
