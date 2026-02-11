@@ -46,6 +46,27 @@ function normalizeJob(job){
   if (!looksLikeJobTitle(title)) return null;
   if (job.job_url && /(privacy|security|disclosure|login|signup|ashbyhq\.com\/?$)/i.test(job.job_url)) return null;
 
+// Drop templating/placeholder junk (seen on Breezy / embedded boards)
+if (/%[A-Z0-9_]+%/.test(title)) return null;
+
+// If title looks like a paragraph, cut aggressively
+title = title.split("\n")[0].trim();
+title = title.split("Responsibilities")[0].trim();
+title = title.split("Description")[0].trim();
+title = title.split("About the role")[0].trim();
+
+// If still long, cut after common separators
+if (title.length > 90) {
+  title = title.split(" — ")[0].split(" - ")[0].split(" | ")[0].trim();
+}
+
+// Remove trailing department labels that get appended (Ashby often does this)
+title = title.replace(/\s+\b(Engineering|Marketing|Sales|Product|Operations|Finance|People|Legal|Design|Support)\b\s*$/i, "").trim();
+title = title.replace(/\s*-\s*\b(Engineering|Marketing|Sales|Product|Operations|Finance|People|Legal|Design|Support)\b\s*$/i, "").trim();
+
+// Location sanity: drop non-location qualifiers like "Forward Deployed"
+if (/\bforward deployed\b/i.test(location)) location = "Not listed";
+  
   // Work-mode detection (for Ashby/others that shove it into title)
   const lower = title.toLowerCase();
   const isRemote = /\bremote\b/.test(lower);
