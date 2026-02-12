@@ -22,23 +22,6 @@ function sameOriginOnly(baseUrl, url){
   } catch { return false; }
 }
 
-// Put this near the top of the try block in main()
-if (c.company_name.toLowerCase() === "conductorone") {
-  jobs = await scrapeConductorOneCareers(c.company_name, c.careers_url);
-}
-else if (c.company_name.toLowerCase() === "daytona") {
-  jobs = await scrapeDaytonaCareers(c.company_name, c.careers_url);
-}
-else if (c.company_name.toLowerCase() === "finally") {
-  jobs = await scrapeFinallyCareers(c.company_name, c.careers_url);
-}
-else if (c.company_name.toLowerCase() === "reflex") {
-  jobs = await scrapeReflexCareers(c.company_name, c.careers_url);
-}
-else {
-  // existing detectSource routing here...
-}
-
 function detectSource(url){
   const u = url.toLowerCase();
   if (u.includes("greenhouse.io")) return "greenhouse";
@@ -664,7 +647,16 @@ async function main(){
     let error = "";
 
        try {
-      if (source === "greenhouse") jobs = await scrapeGreenhouse(c.company_name, c.careers_url);
+      // --- Explicit per-company overrides (must be inside the for-loop) ---
+      const name = c.company_name.toLowerCase();
+
+      if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, c.careers_url);
+      else if (name === "daytona") jobs = await scrapeDaytonaCareers(c.company_name, c.careers_url);
+      else if (name === "finally") jobs = await scrapeFinallyCareers(c.company_name, c.careers_url);
+      else if (name === "reflex") jobs = await scrapeReflexCareers(c.company_name, c.careers_url);
+
+      // --- Otherwise fall back to provider-based detection ---
+      else if (source === "greenhouse") jobs = await scrapeGreenhouse(c.company_name, c.careers_url);
       else if (source === "rippling") jobs = await scrapeRippling(c.company_name, c.careers_url);
       else if (source === "breezy") jobs = await scrapeBreezy(c.company_name, c.careers_url);
       else if (source === "built_in") jobs = await scrapeBuiltIn(c.company_name, c.careers_url);
@@ -672,10 +664,9 @@ async function main(){
       else if (source === "workday") jobs = await scrapeWorkday(c.company_name, c.careers_url);
       else if (source === "scalis") jobs = await scrapeScalis(c.company_name, c.careers_url);
       else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url);
-      else {
-        status = "unsupported";
-        jobs = [];
-      }
+      else if (source === "notion") { status = "unsupported"; jobs = []; }
+      else { status = "unsupported"; jobs = []; }
+
     } catch (e) {
       status = "failed";
       error = String(e?.message || e);
