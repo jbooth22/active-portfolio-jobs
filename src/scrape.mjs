@@ -674,6 +674,7 @@ async function main(){
           effectiveUrl = discovered;
           source = detectSource(effectiveUrl);
         }
+        console.log(`[DISCOVER] ${c.company_name}: ${c.careers_url} -> ${effectiveUrl} (${source})`);
       }
     } catch {}
   }
