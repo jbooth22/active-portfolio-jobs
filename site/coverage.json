@@ -7,7 +7,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:02.747Z"
+    "last_checked_utc": "2026-02-12T06:48:06.277Z"
   },
   {
     "portfolio": "Active Capital",
@@ -17,7 +17,7 @@
     "status": "ok",
     "open_roles_raw": 20,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:07.311Z"
+    "last_checked_utc": "2026-02-12T06:48:11.696Z"
   },
   {
     "portfolio": "Active Capital",
@@ -27,7 +27,7 @@
     "status": "ok",
     "open_roles_raw": 21,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:09.195Z"
+    "last_checked_utc": "2026-02-12T06:48:13.542Z"
   },
   {
     "portfolio": "Active Capital",
@@ -37,7 +37,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:09.599Z"
+    "last_checked_utc": "2026-02-12T06:48:13.781Z"
   },
   {
     "portfolio": "Active Capital",
@@ -47,7 +47,7 @@
     "status": "ok",
     "open_roles_raw": 10,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:10.235Z"
+    "last_checked_utc": "2026-02-12T06:48:14.423Z"
   },
   {
     "portfolio": "Active Capital",
@@ -57,7 +57,7 @@
     "status": "ok",
     "open_roles_raw": 8,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:13.934Z"
+    "last_checked_utc": "2026-02-12T06:48:18.502Z"
   },
   {
     "portfolio": "Active Capital",
@@ -67,7 +67,7 @@
     "status": "ok",
     "open_roles_raw": 9,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:15.724Z"
+    "last_checked_utc": "2026-02-12T06:48:20.313Z"
   },
   {
     "portfolio": "Active Capital",
@@ -77,7 +77,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:15.990Z"
+    "last_checked_utc": "2026-02-12T06:48:20.401Z"
   },
   {
     "portfolio": "Active Capital",
@@ -87,7 +87,7 @@
     "status": "ok",
     "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:16.606Z"
+    "last_checked_utc": "2026-02-12T06:48:20.708Z"
   },
   {
     "portfolio": "Active Capital",
@@ -97,7 +97,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:17.164Z"
+    "last_checked_utc": "2026-02-12T06:48:20.860Z"
   },
   {
     "portfolio": "Active Capital",
@@ -107,7 +107,7 @@
     "status": "ok",
     "open_roles_raw": 11,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:17.554Z"
+    "last_checked_utc": "2026-02-12T06:48:21.501Z"
   },
   {
     "portfolio": "Active Capital",
@@ -117,17 +117,17 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:17.936Z"
+    "last_checked_utc": "2026-02-12T06:48:21.597Z"
   },
   {
     "portfolio": "Active Capital",
     "company_name": "Finally",
     "company_careers_url": "https://finally.com/careers.html",
     "source_type": "ashby",
-    "status": "empty",
-    "open_roles_raw": 0,
+    "status": "ok",
+    "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:21.351Z"
+    "last_checked_utc": "2026-02-12T06:48:23.798Z"
   },
   {
     "portfolio": "Active Capital",
@@ -137,7 +137,7 @@
     "status": "ok",
     "open_roles_raw": 4,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:21.668Z"
+    "last_checked_utc": "2026-02-12T06:48:24.250Z"
   },
   {
     "portfolio": "Active Capital",
@@ -147,7 +147,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:22.085Z"
+    "last_checked_utc": "2026-02-12T06:48:24.549Z"
   },
   {
     "portfolio": "Active Capital",
@@ -157,7 +157,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:22.343Z"
+    "last_checked_utc": "2026-02-12T06:48:24.641Z"
   },
   {
     "portfolio": "Active Capital",
@@ -167,7 +167,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:22.639Z"
+    "last_checked_utc": "2026-02-12T06:48:24.758Z"
   },
   {
     "portfolio": "Active Capital",
@@ -177,7 +177,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:23.078Z"
+    "last_checked_utc": "2026-02-12T06:48:32.139Z"
   },
   {
     "portfolio": "Active Capital",
@@ -187,7 +187,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:24.917Z"
+    "last_checked_utc": "2026-02-12T06:48:33.857Z"
   },
   {
     "portfolio": "Active Capital",
@@ -197,7 +197,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:25.111Z"
+    "last_checked_utc": "2026-02-12T06:48:33.972Z"
   },
   {
     "portfolio": "Active Capital",
@@ -207,7 +207,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:25.413Z"
+    "last_checked_utc": "2026-02-12T06:48:34.137Z"
   },
   {
     "portfolio": "Active Capital",
@@ -217,7 +217,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:25.563Z"
+    "last_checked_utc": "2026-02-12T06:48:34.303Z"
   },
   {
     "portfolio": "Active Capital",
@@ -227,7 +227,7 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "Custom HTML fetch failed: 500",
-    "last_checked_utc": "2026-02-12T06:18:26.377Z"
+    "last_checked_utc": "2026-02-12T06:48:34.798Z"
   },
   {
     "portfolio": "Active Capital",
@@ -237,7 +237,7 @@
     "status": "ok",
     "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-02-12T06:18:26.861Z"
+    "last_checked_utc": "2026-02-12T06:48:34.872Z"
   },
   {
     "portfolio": "Active Capital",
@@ -247,7 +247,7 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "Custom HTML fetch failed: 500",
-    "last_checked_utc": "2026-02-12T06:18:37.821Z"
+    "last_checked_utc": "2026-02-12T06:49:02.559Z"
   },
   {
     "portfolio": "Active Capital",
@@ -257,6 +257,6 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "Custom HTML fetch failed: 500",
-    "last_checked_utc": "2026-02-12T06:18:38.483Z"
+    "last_checked_utc": "2026-02-12T06:49:02.948Z"
   }
 ]
