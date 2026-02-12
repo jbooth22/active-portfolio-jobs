@@ -684,11 +684,14 @@ async function main(){
   let error = "";
 
   try {
-
       // --- Explicit per-company overrides (must be inside the for-loop) ---
       const name = c.company_name.toLowerCase();
+    
+      if (name === "finally") {
+        jobs = await scrapeAshby(c.company_name, "https://jobs.ashbyhq.com/finally");
+      }
 
-      if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, effectiveUrl);
+      else if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, effectiveUrl);
       else if (name === "daytona") jobs = await scrapeDaytonaCareers(c.company_name, effectiveUrl);
       else if (name === "finally") jobs = await scrapeFinallyCareers(c.company_name, effectiveUrl);
       else if (name === "reflex") jobs = await scrapeReflexCareers(c.company_name, effectiveUrl);
