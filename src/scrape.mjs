@@ -188,6 +188,69 @@ async function scrapeBuiltIn(company, careersUrl){
   return out.filter(j => (seen.has(j.job_url) ? false : (seen.add(j.job_url), true)));
 }
 
+async function scrapeGem(company, careersUrl){
+  const browser = await chromium.launch();
+  const page = await browser.newPage({
+    userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)"
+  });
+
+  try {
+    await page.goto(careersUrl, {
+      waitUntil: "domcontentloaded",
+      timeout: 60000
+    });
+
+    await page.waitForTimeout(2500);
+
+    const jobs = await page.evaluate(() => {
+      const out = [];
+      const anchors = Array.from(document.querySelectorAll("a[href]"));
+
+      for (const a of anchors){
+        const href = a.getAttribute("href") || "";
+        const url = new URL(href, window.location.href).toString();
+
+        if (!/\/job/i.test(url)) continue;
+
+        const title = (a.textContent || "").replace(/\s+/g," ").trim();
+        if (!title || title.length < 3) continue;
+
+        out.push({ url, title });
+      }
+
+      return out;
+    });
+
+    const seen = new Set();
+    const cleaned = [];
+
+    for (const j of jobs){
+      if (seen.has(j.url)) continue;
+      seen.add(j.url);
+
+      cleaned.push({
+        portfolio: "Active Capital",
+        company_name: company,
+        company_careers_url: careersUrl,
+        job_title: clean(j.title),
+        job_location: "Not listed",
+        job_url: j.url,
+        source_type: "gem",
+        source_job_id: sha1(j.url),
+        job_key: `gem:${sha1(j.url)}`,
+        status: "open",
+        last_seen_utc: new Date().toISOString(),
+      });
+    }
+
+    return cleaned;
+
+  } finally {
+    await page.close().catch(()=>{});
+    await browser.close().catch(()=>{});
+  }
+}
+
 async function scrapeAshby(company, careersUrl){
   const browser = await chromium.launch();
   const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
@@ -689,6 +752,10 @@ async function main(){
     
       if (name === "finally") {
         jobs = await scrapeAshby(c.company_name, "https://jobs.ashbyhq.com/finally");
+      }
+
+      else if (name === "freshbooks") {
+        jobs = await scrapeGem(c.company_name, c.careers_url);
       }
 
       else if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, effectiveUrl);
