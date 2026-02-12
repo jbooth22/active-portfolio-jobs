@@ -40,6 +40,25 @@ async function fetchText(url){
   return { ok: res.ok, status: res.status, url: res.url, text: await res.text() };
 }
 
+function discoverAtsUrlFromHtml(html){
+  if (!html) return null;
+
+  const patterns = [
+    /https?:\/\/jobs\.ashbyhq\.com\/[a-z0-9_.-]+/i,
+    /https?:\/\/job-boards\.greenhouse\.io\/[a-z0-9_-]+/i,
+    /https?:\/\/wd\d+\.myworkdaysite\.com\/recruiting\/[^"' ]+/i,
+    /https?:\/\/ats\.rippling\.com\/[^"' ]+/i,
+    /https?:\/\/[a-z0-9_-]+\.breezy\.hr\/?/i,
+    /https?:\/\/jobs\.lever\.co\/[a-z0-9_-]+/i,
+  ];
+
+  for (const re of patterns){
+    const m = html.match(re);
+    if (m?.[0]) return m[0];
+  }
+  return null;
+}
+
 // ---------------- Providers ----------------
 
 async function scrapeGreenhouse(company, careersUrl){
@@ -641,29 +660,47 @@ async function main(){
   const coverage = [];
 
   for (const c of companies){
-    const source = detectSource(c.careers_url);
-    let jobs = [];
-    let status = "ok";
-    let error = "";
 
-       try {
+  let effectiveUrl = c.careers_url;
+  let source = detectSource(effectiveUrl);
+
+  // If it's not obviously an ATS, try discovering one from the HTML
+  if (source === "custom_html"){
+    try{
+      const { ok, text } = await fetchText(effectiveUrl);
+      if (ok){
+        const discovered = discoverAtsUrlFromHtml(text);
+        if (discovered){
+          effectiveUrl = discovered;
+          source = detectSource(effectiveUrl);
+        }
+      }
+    } catch {}
+  }
+
+  let jobs = [];
+  let status = "ok";
+  let error = "";
+
+  try {
+
       // --- Explicit per-company overrides (must be inside the for-loop) ---
       const name = c.company_name.toLowerCase();
 
-      if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, c.careers_url);
-      else if (name === "daytona") jobs = await scrapeDaytonaCareers(c.company_name, c.careers_url);
-      else if (name === "finally") jobs = await scrapeFinallyCareers(c.company_name, c.careers_url);
-      else if (name === "reflex") jobs = await scrapeReflexCareers(c.company_name, c.careers_url);
+      if (name === "conductorone") jobs = await scrapeConductorOneCareers(c.company_name, effectiveUrl);
+      else if (name === "daytona") jobs = await scrapeDaytonaCareers(c.company_name, effectiveUrl);
+      else if (name === "finally") jobs = await scrapeFinallyCareers(c.company_name, effectiveUrl);
+      else if (name === "reflex") jobs = await scrapeReflexCareers(c.company_name, effectiveUrl);
 
       // --- Otherwise fall back to provider-based detection ---
-      else if (source === "greenhouse") jobs = await scrapeGreenhouse(c.company_name, c.careers_url);
-      else if (source === "rippling") jobs = await scrapeRippling(c.company_name, c.careers_url);
-      else if (source === "breezy") jobs = await scrapeBreezy(c.company_name, c.careers_url);
-      else if (source === "built_in") jobs = await scrapeBuiltIn(c.company_name, c.careers_url);
-      else if (source === "ashby") jobs = await scrapeAshby(c.company_name, c.careers_url);
-      else if (source === "workday") jobs = await scrapeWorkday(c.company_name, c.careers_url);
-      else if (source === "scalis") jobs = await scrapeScalis(c.company_name, c.careers_url);
-      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, c.careers_url);
+      else if (source === "greenhouse") jobs = await scrapeGreenhouse(c.company_name, effectiveUrl);
+      else if (source === "rippling") jobs = await scrapeRippling(c.company_name, effectiveUrl);
+      else if (source === "breezy") jobs = await scrapeBreezy(c.company_name, effectiveUrl);
+      else if (source === "built_in") jobs = await scrapeBuiltIn(c.company_name, effectiveUrl);
+      else if (source === "ashby") jobs = await scrapeAshby(c.company_name, effectiveUrl);
+      else if (source === "workday") jobs = await scrapeWorkday(c.company_name, effectiveUrl);
+      else if (source === "scalis") jobs = await scrapeScalis(c.company_name, effectiveUrl);
+      else if (source === "custom_html") jobs = await scrapeCustomHtml(c.company_name, effectiveUrl);
       else if (source === "notion") { status = "unsupported"; jobs = []; }
       else { status = "unsupported"; jobs = []; }
 
