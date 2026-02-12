@@ -22,6 +22,23 @@ function sameOriginOnly(baseUrl, url){
   } catch { return false; }
 }
 
+// Put this near the top of the try block in main()
+if (c.company_name.toLowerCase() === "conductorone") {
+  jobs = await scrapeConductorOneCareers(c.company_name, c.careers_url);
+}
+else if (c.company_name.toLowerCase() === "daytona") {
+  jobs = await scrapeDaytonaCareers(c.company_name, c.careers_url);
+}
+else if (c.company_name.toLowerCase() === "finally") {
+  jobs = await scrapeFinallyCareers(c.company_name, c.careers_url);
+}
+else if (c.company_name.toLowerCase() === "reflex") {
+  jobs = await scrapeReflexCareers(c.company_name, c.careers_url);
+}
+else {
+  // existing detectSource routing here...
+}
+
 function detectSource(url){
   const u = url.toLowerCase();
   if (u.includes("greenhouse.io")) return "greenhouse";
@@ -409,6 +426,217 @@ async function scrapeCustomHtml(company, careersUrl){
 
   return out;
 }
+
+async function scrapeReflexCareers(company, careersUrl){
+  const { ok, text, status } = await fetchText(careersUrl);
+  if (!ok) throw new Error(`Reflex fetch failed: ${status}`);
+  const root = parseHtml(text);
+
+  const out = [];
+  const seen = new Set();
+
+  // Cards are typically under "Open Positions"
+  // We look for headings that look like role titles, then find a link nearby.
+  const headings = root.querySelectorAll("h2,h3,h4");
+
+  for (const h of headings){
+    const title = clean(h.textContent);
+    if (!title || title.length < 4) continue;
+
+    // Very light "is this a job title?" check
+    if (/open positions|benefits|values|team|culture/i.test(title)) continue;
+
+    // Find a nearby card/container and a link inside it
+    const card = h.closest("div") || h.parentNode;
+    if (!card) continue;
+
+    const a = card.querySelector("a[href]");
+    if (!a) continue;
+
+    const url = absUrl(careersUrl, a.getAttribute("href"));
+    if (!url) continue;
+
+    // Try to find location text in the same card
+    const cardText = clean(card.textContent);
+    let loc = "Not listed";
+    const m = cardText.match(/\b(Remote|Hybrid|On-site|Austin|New York|NYC|San Francisco|SF|London|United States)\b/i);
+    if (m) loc = m[0];
+
+    if (seen.has(url)) continue;
+    seen.add(url);
+
+    out.push({
+      portfolio: "Active Capital",
+      company_name: company,
+      company_careers_url: careersUrl,
+      job_title: title,
+      job_location: loc,
+      job_url: url,
+      source_type: "custom_html",
+      source_job_id: sha1(url),
+      job_key: `custom_html:${sha1(url)}`,
+      status: "open",
+      last_seen_utc: new Date().toISOString(),
+    });
+  }
+
+  return out;
+}
+
+async function scrapeDaytonaCareers(company, careersUrl){
+  const { ok, text, status } = await fetchText(careersUrl);
+  if (!ok) throw new Error(`Daytona fetch failed: ${status}`);
+  const root = parseHtml(text);
+
+  const anchors = root.querySelectorAll("a[href]");
+  const out = [];
+  const seen = new Set();
+
+  for (const a of anchors){
+    const href = a.getAttribute("href") || "";
+    const url = absUrl(careersUrl, href);
+    if (!url) continue;
+
+    // Daytona links out to Notion for job descriptions
+    if (!/notion\.site/i.test(url)) continue;
+
+    // Anchor text often includes description-ish noise; keep it conservative
+    let textLine = clean(a.textContent);
+    if (!textLine || textLine.length < 6) continue;
+
+    // Common pattern: "Role Name Engineering Austin, or Remote ..."
+    // Heuristic split: title ends before the first department/location-ish token
+    // (This stays “good enough” without getting fancy)
+    let title = textLine;
+    let loc = "Not listed";
+
+    // If it contains "Remote" anywhere, call it Remote
+    if (/\bremote\b/i.test(textLine)) loc = "Remote";
+
+    // If it contains something like "Austin" or "San Francisco" capture it too
+    const cityMatch = textLine.match(/\b(Austin|San Francisco|SF|New York|NYC|London)\b/i);
+    if (cityMatch && loc === "Not listed") loc = cityMatch[0];
+
+    // Title cleanup: remove trailing paragraphs if they got glued
+    title = title.split(".")[0];               // drop full sentences if present
+    title = title.replace(/\s{2,}/g, " ").trim();
+
+    if (title.length < 4) continue;
+    if (seen.has(url)) continue;
+    seen.add(url);
+
+    out.push({
+      portfolio: "Active Capital",
+      company_name: company,
+      company_careers_url: careersUrl,
+      job_title: title,
+      job_location: loc,
+      job_url: url,
+      source_type: "custom_html",
+      source_job_id: sha1(url),
+      job_key: `custom_html:${sha1(url)}`,
+      status: "open",
+      last_seen_utc: new Date().toISOString(),
+    });
+  }
+
+  return out;
+}
+
+async function scrapeFinallyCareers(company, careersUrl){
+  const target = "https://apply.finally.com/";
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
+
+  try {
+    await page.goto(target, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(2500);
+
+    const jobs = await page.evaluate(() => {
+      const out = [];
+      const anchors = Array.from(document.querySelectorAll("a[href]"));
+      for (const a of anchors){
+        const href = a.getAttribute("href") || "";
+        const url = new URL(href, window.location.href).toString();
+
+        // Keep only likely job detail URLs
+        if (!/\/job|\/jobs/i.test(url)) continue;
+
+        const title = (a.textContent || "").replace(/\s+/g, " ").trim();
+        if (!title || title.length < 4) continue;
+
+        out.push({ url, title });
+      }
+      return out;
+    });
+
+    const out = [];
+    const seen = new Set();
+
+    for (const j of jobs){
+      if (seen.has(j.url)) continue;
+      seen.add(j.url);
+
+      out.push({
+        portfolio: "Active Capital",
+        company_name: company,
+        company_careers_url: careersUrl,
+        job_title: clean(j.title),
+        job_location: "Not listed",
+        job_url: j.url,
+        source_type: "custom_html",
+        source_job_id: sha1(j.url),
+        job_key: `custom_html:${sha1(j.url)}`,
+        status: "open",
+        last_seen_utc: new Date().toISOString(),
+      });
+    }
+
+    return out;
+  } finally {
+    await page.close().catch(()=>{});
+    await browser.close().catch(()=>{});
+  }
+}
+
+async function scrapeConductorOneCareers(company, careersUrl){
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ userAgent: "Mozilla/5.0 (active-portfolio-jobs-bot)" });
+
+  try {
+    await page.goto(careersUrl, { waitUntil: "domcontentloaded", timeout: 60000 });
+    await page.waitForTimeout(1500);
+
+    const found = await page.evaluate(() => {
+      const urls = new Set();
+
+      // Normal anchors
+      for (const a of Array.from(document.querySelectorAll("a[href]"))){
+        try { urls.add(new URL(a.getAttribute("href"), window.location.href).toString()); } catch {}
+      }
+
+      // Sometimes the URL is embedded in scripts
+      const text = document.documentElement.innerHTML || "";
+      const m = text.match(/https?:\/\/[^\s"'<>]+/g) || [];
+      for (const u of m) urls.add(u);
+
+      return Array.from(urls);
+    });
+
+    const gh = found.find(u => /greenhouse\.io/i.test(u));
+    if (gh) {
+      // If we found a Greenhouse board URL, just use your existing API scraper.
+      return await scrapeGreenhouse(company, gh);
+    }
+
+    // Fallback: if no board is found, return empty but mark coverage as empty
+    return [];
+  } finally {
+    await page.close().catch(()=>{});
+    await browser.close().catch(()=>{});
+  }
+}
+
 
 // ---------------- Orchestration ----------------
 
