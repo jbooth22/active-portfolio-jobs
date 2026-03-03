@@ -10,7 +10,7 @@
     "source_job_id": "abea4e34a4a40d29754e53e81b4e285a45f9e5fe",
     "job_key": "breezy:abea4e34a4a40d29754e53e81b4e285a45f9e5fe",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.386Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -23,7 +23,7 @@
     "source_job_id": "ec98355f2fa0e0c9c5dc79313f70541fa627ef4f",
     "job_key": "breezy:ec98355f2fa0e0c9c5dc79313f70541fa627ef4f",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.386Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -36,7 +36,7 @@
     "source_job_id": "1ac6c2948ae20b6c512f2ba2715d7d01df9c223d",
     "job_key": "breezy:1ac6c2948ae20b6c512f2ba2715d7d01df9c223d",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.386Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -49,7 +49,7 @@
     "source_job_id": "c7389b38bc5ddb5d133cf25b2259136dd80e91ae",
     "job_key": "breezy:c7389b38bc5ddb5d133cf25b2259136dd80e91ae",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.386Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -62,7 +62,7 @@
     "source_job_id": "97c370a88a7c8a290b479814863c4ae7c4149738",
     "job_key": "breezy:97c370a88a7c8a290b479814863c4ae7c4149738",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.387Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -75,20 +75,7 @@
     "source_job_id": "dfe8ddb3969c6d603ba47e0a4539cf5537cf7540",
     "job_key": "breezy:dfe8ddb3969c6d603ba47e0a4539cf5537cf7540",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.387Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SuperDispatch",
-    "company_careers_url": "https://superdispatch.breezy.hr/",
-    "job_title": "Analytics Data Engineer%LABEL_MULTIPLE_LOCATIONS% (2) %LABEL_POSITION_TYPE_REMOTE_ANY%$85k - $100k / year%BUTTON_APPLY%",
-    "job_location": "Not listed",
-    "job_url": "https://superdispatch.breezy.hr/p/7e8f59ae2120-analytics-data-engineer",
-    "source_type": "breezy",
-    "source_job_id": "663d19ad217abcfa0ccc5caee082f0211f097301",
-    "job_key": "breezy:663d19ad217abcfa0ccc5caee082f0211f097301",
-    "status": "open",
-    "last_seen_utc": "2026-03-02T14:08:43.387Z"
+    "last_seen_utc": "2026-03-03T14:06:30.807Z"
   },
   {
     "portfolio": "Active Capital",
@@ -101,6 +88,6 @@
     "source_job_id": "6ef02d165956a31094943f7424aec27750738a11",
     "job_key": "custom_html:6ef02d165956a31094943f7424aec27750738a11",
     "status": "open",
-    "last_seen_utc": "2026-03-02T14:09:09.020Z"
+    "last_seen_utc": "2026-03-03T14:06:40.966Z"
   }
 ]
