@@ -10,7 +10,7 @@
     "source_job_id": "55eb2e9a558fbfc5d837a1d97e153290e406c4c1",
     "job_key": "workday:55eb2e9a558fbfc5d837a1d97e153290e406c4c1",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -23,7 +23,20 @@
     "source_job_id": "099a1216512547defecb4378fa5b06e1858310af",
     "job_key": "workday:099a1216512547defecb4378fa5b06e1858310af",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
+  },
+  {
+    "portfolio": "Active Capital",
+    "company_name": "Cart.com",
+    "company_careers_url": "https://wd1.myworkdaysite.com/recruiting/cart/Cart",
+    "job_title": "Data & Analytics Intern",
+    "job_location": "Not listed",
+    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Houston-TX-Headquarters/Data---Analytics-Intern_R-102238",
+    "source_type": "workday",
+    "source_job_id": "51d05398a8182431956752b2abb1bcdea3870f06",
+    "job_key": "workday:51d05398a8182431956752b2abb1bcdea3870f06",
+    "status": "open",
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -36,7 +49,7 @@
     "source_job_id": "89eaff430d70b7b1cbf6f7cc4ca5eee9e55f0a40",
     "job_key": "workday:89eaff430d70b7b1cbf6f7cc4ca5eee9e55f0a40",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -49,7 +62,7 @@
     "source_job_id": "837c2ea2236aad5d5289d8a80cd488105435ff5c",
     "job_key": "workday:837c2ea2236aad5d5289d8a80cd488105435ff5c",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -62,7 +75,7 @@
     "source_job_id": "19affafa0608f07b5aa5ce615da91132035b27f0",
     "job_key": "workday:19affafa0608f07b5aa5ce615da91132035b27f0",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -75,7 +88,7 @@
     "source_job_id": "7f9ae6c2c712f9d9867bb2f2b9dac705ec604165",
     "job_key": "workday:7f9ae6c2c712f9d9867bb2f2b9dac705ec604165",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -88,7 +101,7 @@
     "source_job_id": "e40f894e8488c4c32144d87ef4d00177f09ed343",
     "job_key": "workday:e40f894e8488c4c32144d87ef4d00177f09ed343",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -101,7 +114,7 @@
     "source_job_id": "7defc000b9b1e39d03082b7ee60521449dbe0321",
     "job_key": "workday:7defc000b9b1e39d03082b7ee60521449dbe0321",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -114,20 +127,7 @@
     "source_job_id": "23a5cfb21185b1f9fe17ef0882d6a12d33fca9ed",
     "job_key": "workday:23a5cfb21185b1f9fe17ef0882d6a12d33fca9ed",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "Cart.com",
-    "company_careers_url": "https://wd1.myworkdaysite.com/recruiting/cart/Cart",
-    "job_title": "FC Lead",
-    "job_location": "Not listed",
-    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Dallas-TX-Fulfillment-Center/FC-Lead_R-102208",
-    "source_type": "workday",
-    "source_job_id": "a54b3bc4b2b0ac972b16382c8f0ce72759ae63bb",
-    "job_key": "workday:a54b3bc4b2b0ac972b16382c8f0ce72759ae63bb",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -140,7 +140,7 @@
     "source_job_id": "fd2d3b7fceb87120cb3e1db18c26c6e3ca25ef09",
     "job_key": "workday:fd2d3b7fceb87120cb3e1db18c26c6e3ca25ef09",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -153,7 +153,7 @@
     "source_job_id": "787971affb26f68e82cf5d65cf91126190a9e0ef",
     "job_key": "workday:787971affb26f68e82cf5d65cf91126190a9e0ef",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -166,20 +166,20 @@
     "source_job_id": "52d0f9c832115dce6711a00fc03b0ef2025927d5",
     "job_key": "workday:52d0f9c832115dce6711a00fc03b0ef2025927d5",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
     "company_name": "Cart.com",
     "company_careers_url": "https://wd1.myworkdaysite.com/recruiting/cart/Cart",
-    "job_title": "Fulfillment Operations Supervisor",
+    "job_title": "Inventory Control Associate",
     "job_location": "Not listed",
-    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Columbia-MD-Fulfillment-Center/Fulfillment-Operations-Supervisor_R-102199-1",
+    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Terrell-TX-Fulfillment-Center/Inventory-Control-Associate_R-102244",
     "source_type": "workday",
-    "source_job_id": "31e0aa0270eb95146cfb7ea5d77533e4b5cde522",
-    "job_key": "workday:31e0aa0270eb95146cfb7ea5d77533e4b5cde522",
+    "source_job_id": "dade58567c4ebf7383d2727941f6b9da61892a40",
+    "job_key": "workday:dade58567c4ebf7383d2727941f6b9da61892a40",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -192,7 +192,7 @@
     "source_job_id": "24b078c4e85a2022b53ebd761b9439a930a6f6ce",
     "job_key": "workday:24b078c4e85a2022b53ebd761b9439a930a6f6ce",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -205,7 +205,20 @@
     "source_job_id": "09c214d0b10e3f8990730523bc17a2d9249c9882",
     "job_key": "workday:09c214d0b10e3f8990730523bc17a2d9249c9882",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
+  },
+  {
+    "portfolio": "Active Capital",
+    "company_name": "Cart.com",
+    "company_careers_url": "https://wd1.myworkdaysite.com/recruiting/cart/Cart",
+    "job_title": "Outbound Ops. Supervisor",
+    "job_location": "Not listed",
+    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Dallas-TX-Fulfillment-Center/Outbound-Ops-Supervisor_R-102239",
+    "source_type": "workday",
+    "source_job_id": "3a091a10128daeaa78c9d4c56848e04b3474e329",
+    "job_key": "workday:3a091a10128daeaa78c9d4c56848e04b3474e329",
+    "status": "open",
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -218,7 +231,7 @@
     "source_job_id": "15ef2876083ad1a8c92428bc0b9732ceb3533059",
     "job_key": "workday:15ef2876083ad1a8c92428bc0b9732ceb3533059",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -231,7 +244,7 @@
     "source_job_id": "e2a097a280de8951e47b6fd8d2ca52ad18a2084f",
     "job_key": "workday:e2a097a280de8951e47b6fd8d2ca52ad18a2084f",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.781Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -244,20 +257,7 @@
     "source_job_id": "a8971d49fec0eb82ca41572a59322a2376172a05",
     "job_key": "workday:a8971d49fec0eb82ca41572a59322a2376172a05",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "Cart.com",
-    "company_careers_url": "https://wd1.myworkdaysite.com/recruiting/cart/Cart",
-    "job_title": "Workplace Coordinator",
-    "job_location": "Not listed",
-    "job_url": "https://wd1.myworkdaysite.com/en-US/recruiting/cart/Cart/job/Groveport-OH-Fulfillment-Center-1/Workplace-Coordinator_R-102186",
-    "source_type": "workday",
-    "source_job_id": "c1c0c31085cc8fd2985e9442817673fc7ed1a62d",
-    "job_key": "workday:c1c0c31085cc8fd2985e9442817673fc7ed1a62d",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:27.782Z"
+    "last_seen_utc": "2026-03-04T14:04:52.700Z"
   },
   {
     "portfolio": "Active Capital",
@@ -270,7 +270,7 @@
     "source_job_id": "bbdfc04a900c4c5989eb4c3a62aef08cea0e29d4",
     "job_key": "custom_html:bbdfc04a900c4c5989eb4c3a62aef08cea0e29d4",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -283,7 +283,7 @@
     "source_job_id": "9b2bb94139cf85d01e3794c9d61448bb995af952",
     "job_key": "custom_html:9b2bb94139cf85d01e3794c9d61448bb995af952",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -296,7 +296,7 @@
     "source_job_id": "fd7143c0362b3f7b3f4cd16f34143cbe997ec2d9",
     "job_key": "custom_html:fd7143c0362b3f7b3f4cd16f34143cbe997ec2d9",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.792Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -309,7 +309,7 @@
     "source_job_id": "10355728e8d71c2db767395c8423908c1d554726",
     "job_key": "custom_html:10355728e8d71c2db767395c8423908c1d554726",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -322,7 +322,7 @@
     "source_job_id": "b8e734075b6991ac855d27576138a205b8f05146",
     "job_key": "custom_html:b8e734075b6991ac855d27576138a205b8f05146",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -335,7 +335,7 @@
     "source_job_id": "8c72e50cf8bac5545b8e166ace3cb6af4232812e",
     "job_key": "custom_html:8c72e50cf8bac5545b8e166ace3cb6af4232812e",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -348,7 +348,7 @@
     "source_job_id": "ff88865d52d214a98b3af8aab1b685cae6ef0f2a",
     "job_key": "custom_html:ff88865d52d214a98b3af8aab1b685cae6ef0f2a",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -361,7 +361,7 @@
     "source_job_id": "cbbba10df9e0e84de398c0ba05b24f66f82bc69c",
     "job_key": "custom_html:cbbba10df9e0e84de398c0ba05b24f66f82bc69c",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -374,7 +374,7 @@
     "source_job_id": "042976c6cbaf52986aeb0dbaf4a91763a04e4932",
     "job_key": "custom_html:042976c6cbaf52986aeb0dbaf4a91763a04e4932",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -387,7 +387,7 @@
     "source_job_id": "40ec9ac4487d640d1df3dc70f45d7e4d6aaf3982",
     "job_key": "custom_html:40ec9ac4487d640d1df3dc70f45d7e4d6aaf3982",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -400,7 +400,7 @@
     "source_job_id": "aa4c02111d06b0e2f604bc82d5e3eaaeb52f6255",
     "job_key": "custom_html:aa4c02111d06b0e2f604bc82d5e3eaaeb52f6255",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.793Z"
+    "last_seen_utc": "2026-03-04T14:05:59.029Z"
   },
   {
     "portfolio": "Active Capital",
@@ -413,7 +413,7 @@
     "source_job_id": "3e10ae8df3ab6971897e361ea52468b8554cd264",
     "job_key": "custom_html:3e10ae8df3ab6971897e361ea52468b8554cd264",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:40.500Z"
+    "last_seen_utc": "2026-03-04T14:06:01.448Z"
   },
   {
     "portfolio": "Active Capital",
@@ -426,7 +426,7 @@
     "source_job_id": "60b9e89f9ce887853ed301c4223c5259047673c5",
     "job_key": "custom_html:60b9e89f9ce887853ed301c4223c5259047673c5",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:40.499Z"
+    "last_seen_utc": "2026-03-04T14:06:01.448Z"
   },
   {
     "portfolio": "Active Capital",
@@ -439,7 +439,7 @@
     "source_job_id": "3bc06bda12310784fed5fcd6198cd6269597c523",
     "job_key": "ashby:3bc06bda12310784fed5fcd6198cd6269597c523",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -452,7 +452,7 @@
     "source_job_id": "aa4a4def5df1f5f95d7a8dce897be917d3fd1a70",
     "job_key": "ashby:aa4a4def5df1f5f95d7a8dce897be917d3fd1a70",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -465,7 +465,7 @@
     "source_job_id": "c22d833800b86819445981f920b85e2bb8d3b4ed",
     "job_key": "ashby:c22d833800b86819445981f920b85e2bb8d3b4ed",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -478,7 +478,7 @@
     "source_job_id": "a7b9535a9d19ea50a2f763c6dfd18babb63aea73",
     "job_key": "ashby:a7b9535a9d19ea50a2f763c6dfd18babb63aea73",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -491,7 +491,7 @@
     "source_job_id": "d297d81cf7cfa5f1e252b49c322b40b873cc806d",
     "job_key": "ashby:d297d81cf7cfa5f1e252b49c322b40b873cc806d",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -504,7 +504,7 @@
     "source_job_id": "d873f32f63973e66c081d2ee8375d5743ce532aa",
     "job_key": "ashby:d873f32f63973e66c081d2ee8375d5743ce532aa",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -517,7 +517,7 @@
     "source_job_id": "fd7f980a4924a77dfadccb8394feef52cdf19887",
     "job_key": "ashby:fd7f980a4924a77dfadccb8394feef52cdf19887",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -530,7 +530,7 @@
     "source_job_id": "58bafc73a83b332bafa49114d2e0ca2417968243",
     "job_key": "ashby:58bafc73a83b332bafa49114d2e0ca2417968243",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -543,7 +543,7 @@
     "source_job_id": "f2488365fbf1013628365032e971b2056c0aead2",
     "job_key": "ashby:f2488365fbf1013628365032e971b2056c0aead2",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -556,7 +556,7 @@
     "source_job_id": "712bac94db0df21e1f4412ceee42dd5eba6bc2fb",
     "job_key": "ashby:712bac94db0df21e1f4412ceee42dd5eba6bc2fb",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:36.556Z"
+    "last_seen_utc": "2026-03-04T14:05:57.366Z"
   },
   {
     "portfolio": "Active Capital",
@@ -569,7 +569,7 @@
     "source_job_id": "79b33402656ed6745e0c524ce1cb08453f01f13d",
     "job_key": "ashby:79b33402656ed6745e0c524ce1cb08453f01f13d",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:40.200Z"
+    "last_seen_utc": "2026-03-04T14:06:01.243Z"
   },
   {
     "portfolio": "Active Capital",
@@ -582,7 +582,7 @@
     "source_job_id": "091855ab32bcbe8170aedb49f064d54c3a30a65a",
     "job_key": "ashby:091855ab32bcbe8170aedb49f064d54c3a30a65a",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:40.200Z"
+    "last_seen_utc": "2026-03-04T14:06:01.243Z"
   },
   {
     "portfolio": "Active Capital",
@@ -595,7 +595,7 @@
     "source_job_id": "5320fc9a12e04269e298d1362ab06464f03702b3",
     "job_key": "ashby:5320fc9a12e04269e298d1362ab06464f03702b3",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:40.200Z"
+    "last_seen_utc": "2026-03-04T14:06:01.243Z"
   },
   {
     "portfolio": "Active Capital",
@@ -608,7 +608,7 @@
     "source_job_id": "436323b561157c9da1b58d8a2eb4ee1ad0830e99",
     "job_key": "gem:436323b561157c9da1b58d8a2eb4ee1ad0830e99",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:46.270Z"
+    "last_seen_utc": "2026-03-04T14:06:08.049Z"
   },
   {
     "portfolio": "Active Capital",
@@ -621,7 +621,7 @@
     "source_job_id": "2b9f1eec849b569b077a13e7e1622dc8aaf25698",
     "job_key": "rippling:2b9f1eec849b569b077a13e7e1622dc8aaf25698",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.214Z"
+    "last_seen_utc": "2026-03-04T14:05:58.520Z"
   },
   {
     "portfolio": "Active Capital",
@@ -634,7 +634,7 @@
     "source_job_id": "15c7b7280de90116ddb7587d31284380ff8b5fcb",
     "job_key": "rippling:15c7b7280de90116ddb7587d31284380ff8b5fcb",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.215Z"
+    "last_seen_utc": "2026-03-04T14:05:58.520Z"
   },
   {
     "portfolio": "Active Capital",
@@ -647,7 +647,7 @@
     "source_job_id": "426046312a8dc2b319b337b6fda5145e3b662e81",
     "job_key": "rippling:426046312a8dc2b319b337b6fda5145e3b662e81",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:37.215Z"
+    "last_seen_utc": "2026-03-04T14:05:58.520Z"
   },
   {
     "portfolio": "Active Capital",
@@ -660,137 +660,7 @@
     "source_job_id": "68d849cc91f0ba9590822e23dce1df6e8f1883a5",
     "job_key": "built_in:68d849cc91f0ba9590822e23dce1df6e8f1883a5",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:42.105Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/5ba6575b-90b7-4b36-ba91-8eda5e15cf56?tracking_id=343482d7-b5b2-4d41-bc78-484d32bd8912",
-    "source_type": "scalis",
-    "source_job_id": "4e0d813904d3de6a5c24f9f5dd8ade0518f40a13",
-    "job_key": "scalis:4e0d813904d3de6a5c24f9f5dd8ade0518f40a13",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/d0b7e154-6ff2-4d43-b9db-ae5bea32faa1?tracking_id=d6bf3cab-e00e-4eed-adec-c002cc0fda4d",
-    "source_type": "scalis",
-    "source_job_id": "a05ab6e8494a65575fc934d82c3550de8d3f8d53",
-    "job_key": "scalis:a05ab6e8494a65575fc934d82c3550de8d3f8d53",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/a29206f3-507d-4fd7-bdbb-ed1f933e924d?tracking_id=b62ef17e-3fec-454d-a79e-dbff93c01b50",
-    "source_type": "scalis",
-    "source_job_id": "fdc272f8df587c9712f9ae36ea83e99dc2b85796",
-    "job_key": "scalis:fdc272f8df587c9712f9ae36ea83e99dc2b85796",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/2c52fd98-bc7d-40a5-ab46-13b77fd324e8?tracking_id=554b0bb1-920b-4fbd-beef-1777011c86b7",
-    "source_type": "scalis",
-    "source_job_id": "08b3d5cf2c7295341264b9f391cf61395fe304f3",
-    "job_key": "scalis:08b3d5cf2c7295341264b9f391cf61395fe304f3",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/646d8b8d-8f8d-4ffb-8281-d1cebc2e55df?tracking_id=10382329-c286-4d50-a02f-0691b24fd00e",
-    "source_type": "scalis",
-    "source_job_id": "1adfdb3fbd02e9e494468f128874a3b2a7636a93",
-    "job_key": "scalis:1adfdb3fbd02e9e494468f128874a3b2a7636a93",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/b8ba6af4-4850-44b3-9124-75a62fe97da8?tracking_id=72f1b253-964a-47d9-9dff-9dc59d917610",
-    "source_type": "scalis",
-    "source_job_id": "dbec98c943acb5eae185bd9a017d2a46d167eda8",
-    "job_key": "scalis:dbec98c943acb5eae185bd9a017d2a46d167eda8",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/d1337327-17ff-4fbb-8882-e01a1702ac75?tracking_id=4b25dcd1-3686-453b-9de0-c5430a84bac1",
-    "source_type": "scalis",
-    "source_job_id": "ecb028cbc7f35662b4898a1c83f82883eb2e9521",
-    "job_key": "scalis:ecb028cbc7f35662b4898a1c83f82883eb2e9521",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive II",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/0f35430c-2428-4d40-ada4-f134a57b51e3?tracking_id=fb478fe0-8ec3-48e7-acd7-a086cd2162a7",
-    "source_type": "scalis",
-    "source_job_id": "19398e221f502e0e9b8c6e77d028ea8c3ac968e0",
-    "job_key": "scalis:19398e221f502e0e9b8c6e77d028ea8c3ac968e0",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Account Executive, Enterprise",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/56081f07-d70c-4818-af78-41a200fffd1b?tracking_id=b73f6800-0ef0-4af3-b85f-ab72aacca0fe",
-    "source_type": "scalis",
-    "source_job_id": "db9e30f5147b99a7fb6d914f0fb5de87c75e349b",
-    "job_key": "scalis:db9e30f5147b99a7fb6d914f0fb5de87c75e349b",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "SlangAI",
-    "company_careers_url": "https://slangai.scalis.ai/jobs/embed?page=1&limit=10",
-    "job_title": "Backend Software Engineer",
-    "job_location": "Not listed",
-    "job_url": "https://slangai.scalis.ai/job/7d6b8470-976e-42f6-a72f-c31df60c3635?tracking_id=4b4e9af5-2bb1-402f-856c-09dd75e37999",
-    "source_type": "scalis",
-    "source_job_id": "cde72c4a182d0fdc1aec64bc6dff7e943e5b89fe",
-    "job_key": "scalis:cde72c4a182d0fdc1aec64bc6dff7e943e5b89fe",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:34.821Z"
+    "last_seen_utc": "2026-03-04T14:06:03.465Z"
   },
   {
     "portfolio": "Active Capital",
@@ -803,7 +673,7 @@
     "source_job_id": "fbb364ee1e1a55bca96765fa7c02d494aefbd0aa",
     "job_key": "ashby:fbb364ee1e1a55bca96765fa7c02d494aefbd0aa",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -816,7 +686,7 @@
     "source_job_id": "d9574533696ad42df6fd09436b76b204231e2120",
     "job_key": "ashby:d9574533696ad42df6fd09436b76b204231e2120",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.641Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -829,7 +699,7 @@
     "source_job_id": "4e0720684f3269c9347059bc7705e0070ad4ed41",
     "job_key": "ashby:4e0720684f3269c9347059bc7705e0070ad4ed41",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.641Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -842,7 +712,7 @@
     "source_job_id": "694719ea6a2962aa3dff8dc401c1f0c2c9cdab00",
     "job_key": "ashby:694719ea6a2962aa3dff8dc401c1f0c2c9cdab00",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.642Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -855,7 +725,20 @@
     "source_job_id": "eea86c3bd461567dac5d1f2c61e08ecca9e8692c",
     "job_key": "ashby:eea86c3bd461567dac5d1f2c61e08ecca9e8692c",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.642Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
+  },
+  {
+    "portfolio": "Active Capital",
+    "company_name": "Teleport",
+    "company_careers_url": "https://jobs.ashbyhq.com/goteleport",
+    "job_title": "Field Engineer (Korean Fluency Required)Revenue",
+    "job_location": "Remote",
+    "job_url": "https://jobs.ashbyhq.com/goteleport/ddeda6f7-0251-489c-8cf2-15446281bf13",
+    "source_type": "ashby",
+    "source_job_id": "f54b3fa03d97c9f8bfb7d4c47556ae000acd7cab",
+    "job_key": "ashby:f54b3fa03d97c9f8bfb7d4c47556ae000acd7cab",
+    "status": "open",
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -868,7 +751,7 @@
     "source_job_id": "ffe365c8c5d99b8f42df308f589e17c25d8ff12d",
     "job_key": "ashby:ffe365c8c5d99b8f42df308f589e17c25d8ff12d",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -881,7 +764,7 @@
     "source_job_id": "b526be295764a544ff35212a8abc76f8f7a4ea80",
     "job_key": "ashby:b526be295764a544ff35212a8abc76f8f7a4ea80",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.642Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -894,7 +777,7 @@
     "source_job_id": "2db3655e5861c94b3eb574a087589a6525ecb547",
     "job_key": "ashby:2db3655e5861c94b3eb574a087589a6525ecb547",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.643Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -907,7 +790,7 @@
     "source_job_id": "ad4f3ef63f409a2d974eb48eee5b0a2e1e356d60",
     "job_key": "ashby:ad4f3ef63f409a2d974eb48eee5b0a2e1e356d60",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.643Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -920,7 +803,7 @@
     "source_job_id": "8ba0e85e2c69392f3d4f41fee33734935d4d0d15",
     "job_key": "ashby:8ba0e85e2c69392f3d4f41fee33734935d4d0d15",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -933,7 +816,7 @@
     "source_job_id": "dc3222ba1cc7b7be1ab93d6c95a668e467d2ac22",
     "job_key": "ashby:dc3222ba1cc7b7be1ab93d6c95a668e467d2ac22",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -946,7 +829,7 @@
     "source_job_id": "10b8a5d908fda5bfb17614418ba78eae68df7c92",
     "job_key": "ashby:10b8a5d908fda5bfb17614418ba78eae68df7c92",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -959,7 +842,7 @@
     "source_job_id": "6711fb508bbb703fe5ef1261fa09c61341ed0bd0",
     "job_key": "ashby:6711fb508bbb703fe5ef1261fa09c61341ed0bd0",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.641Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -972,7 +855,7 @@
     "source_job_id": "3d4c3dbd645bc97c927da2fee4ac1233706c5960",
     "job_key": "ashby:3d4c3dbd645bc97c927da2fee4ac1233706c5960",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.643Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -985,7 +868,7 @@
     "source_job_id": "3c069e4d76512d38e8aa4d7cad1902a933f732cf",
     "job_key": "ashby:3c069e4d76512d38e8aa4d7cad1902a933f732cf",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -998,7 +881,7 @@
     "source_job_id": "1a5eea488c2f0b22ddccce33af9de9cacc9af10e",
     "job_key": "ashby:1a5eea488c2f0b22ddccce33af9de9cacc9af10e",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1011,7 +894,7 @@
     "source_job_id": "b287896d4076d9190cfc92e6d60ee1c7e8dc6cb4",
     "job_key": "ashby:b287896d4076d9190cfc92e6d60ee1c7e8dc6cb4",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.643Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1024,7 +907,7 @@
     "source_job_id": "6f8181ff6bffaa5f8f37b56a8e54bf8ad95639d7",
     "job_key": "ashby:6f8181ff6bffaa5f8f37b56a8e54bf8ad95639d7",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.641Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1037,7 +920,7 @@
     "source_job_id": "e2b203526154afb37b81354959fdeb73c0e3aa7a",
     "job_key": "ashby:e2b203526154afb37b81354959fdeb73c0e3aa7a",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1050,7 +933,7 @@
     "source_job_id": "e4cba9040dfe37d587829967054c1cd9090406a0",
     "job_key": "ashby:e4cba9040dfe37d587829967054c1cd9090406a0",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.640Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1063,7 +946,7 @@
     "source_job_id": "569720f41279022f36cf999d325034fdbfe874c5",
     "job_key": "ashby:569720f41279022f36cf999d325034fdbfe874c5",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:29.641Z"
+    "last_seen_utc": "2026-03-04T14:04:54.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1076,7 +959,7 @@
     "source_job_id": "5061916007",
     "job_key": "greenhouse:5061916007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1089,20 +972,7 @@
     "source_job_id": "5039450007",
     "job_key": "greenhouse:5039450007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
-  },
-  {
-    "portfolio": "Active Capital",
-    "company_name": "ZenBusiness",
-    "company_careers_url": "https://job-boards.greenhouse.io/zenbusiness",
-    "job_title": "Director of Content",
-    "job_location": "Remote",
-    "job_url": "https://job-boards.greenhouse.io/zenbusiness/jobs/5037155007",
-    "source_type": "greenhouse",
-    "source_job_id": "5037155007",
-    "job_key": "greenhouse:5037155007",
-    "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1115,7 +985,7 @@
     "source_job_id": "5054653007",
     "job_key": "greenhouse:5054653007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1128,7 +998,7 @@
     "source_job_id": "5050886007",
     "job_key": "greenhouse:5050886007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1141,7 +1011,7 @@
     "source_job_id": "5060256007",
     "job_key": "greenhouse:5060256007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   },
   {
     "portfolio": "Active Capital",
@@ -1154,6 +1024,6 @@
     "source_job_id": "5066663007",
     "job_key": "greenhouse:5066663007",
     "status": "open",
-    "last_seen_utc": "2026-03-03T14:06:43.442Z"
+    "last_seen_utc": "2026-03-04T14:06:04.981Z"
   }
 ]
