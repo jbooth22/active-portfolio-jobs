@@ -7,7 +7,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:08:51.384Z"
+    "last_checked_utc": "2026-03-11T14:13:04.565Z"
   },
   {
     "portfolio": "Active Capital",
@@ -17,7 +17,7 @@
     "status": "ok",
     "open_roles_raw": 20,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:08:55.561Z"
+    "last_checked_utc": "2026-03-11T14:13:12.068Z"
   },
   {
     "portfolio": "Active Capital",
@@ -25,9 +25,9 @@
     "company_careers_url": "https://jobs.ashbyhq.com/goteleport",
     "source_type": "ashby",
     "status": "ok",
-    "open_roles_raw": 22,
+    "open_roles_raw": 21,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:08:57.442Z"
+    "last_checked_utc": "2026-03-11T14:13:13.945Z"
   },
   {
     "portfolio": "Active Capital",
@@ -37,7 +37,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:08:57.752Z"
+    "last_checked_utc": "2026-03-11T14:13:14.309Z"
   },
   {
     "portfolio": "Active Capital",
@@ -45,9 +45,9 @@
     "company_careers_url": "https://superdispatch.breezy.hr/",
     "source_type": "breezy",
     "status": "ok",
-    "open_roles_raw": 7,
+    "open_roles_raw": 6,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:08:58.244Z"
+    "last_checked_utc": "2026-03-11T14:13:15.138Z"
   },
   {
     "portfolio": "Active Capital",
@@ -57,7 +57,7 @@
     "status": "failed",
     "open_roles_raw": 0,
     "error": "page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://slangai.scalis.ai/jobs/embed?page=1&limit=10\", waiting until \"networkidle\"\n",
-    "last_checked_utc": "2026-03-10T14:09:58.343Z"
+    "last_checked_utc": "2026-03-11T14:14:15.255Z"
   },
   {
     "portfolio": "Active Capital",
@@ -67,7 +67,7 @@
     "status": "ok",
     "open_roles_raw": 10,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:00.247Z"
+    "last_checked_utc": "2026-03-11T14:14:17.119Z"
   },
   {
     "portfolio": "Active Capital",
@@ -77,7 +77,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:00.748Z"
+    "last_checked_utc": "2026-03-11T14:14:17.213Z"
   },
   {
     "portfolio": "Active Capital",
@@ -87,7 +87,7 @@
     "status": "ok",
     "open_roles_raw": 3,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:01.167Z"
+    "last_checked_utc": "2026-03-11T14:14:17.508Z"
   },
   {
     "portfolio": "Active Capital",
@@ -97,7 +97,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:01.563Z"
+    "last_checked_utc": "2026-03-11T14:14:18.074Z"
   },
   {
     "portfolio": "Active Capital",
@@ -107,7 +107,7 @@
     "status": "ok",
     "open_roles_raw": 11,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:01.956Z"
+    "last_checked_utc": "2026-03-11T14:14:18.543Z"
   },
   {
     "portfolio": "Active Capital",
@@ -117,7 +117,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:02.570Z"
+    "last_checked_utc": "2026-03-11T14:14:18.751Z"
   },
   {
     "portfolio": "Active Capital",
@@ -127,7 +127,7 @@
     "status": "ok",
     "open_roles_raw": 2,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:04.716Z"
+    "last_checked_utc": "2026-03-11T14:14:26.035Z"
   },
   {
     "portfolio": "Active Capital",
@@ -137,7 +137,7 @@
     "status": "ok",
     "open_roles_raw": 2,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:05.110Z"
+    "last_checked_utc": "2026-03-11T14:14:26.541Z"
   },
   {
     "portfolio": "Active Capital",
@@ -147,7 +147,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:05.486Z"
+    "last_checked_utc": "2026-03-11T14:14:26.831Z"
   },
   {
     "portfolio": "Active Capital",
@@ -157,7 +157,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:05.675Z"
+    "last_checked_utc": "2026-03-11T14:14:26.897Z"
   },
   {
     "portfolio": "Active Capital",
@@ -167,7 +167,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:06.003Z"
+    "last_checked_utc": "2026-03-11T14:14:27.022Z"
   },
   {
     "portfolio": "Active Capital",
@@ -177,7 +177,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:06.410Z"
+    "last_checked_utc": "2026-03-11T14:14:27.466Z"
   },
   {
     "portfolio": "Active Capital",
@@ -187,7 +187,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:07.103Z"
+    "last_checked_utc": "2026-03-11T14:14:27.900Z"
   },
   {
     "portfolio": "Active Capital",
@@ -197,7 +197,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:07.227Z"
+    "last_checked_utc": "2026-03-11T14:14:28.018Z"
   },
   {
     "portfolio": "Active Capital",
@@ -207,7 +207,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:07.335Z"
+    "last_checked_utc": "2026-03-11T14:14:28.189Z"
   },
   {
     "portfolio": "Active Capital",
@@ -217,7 +217,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:07.591Z"
+    "last_checked_utc": "2026-03-11T14:14:28.313Z"
   },
   {
     "portfolio": "Active Capital",
@@ -227,7 +227,7 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:08.388Z"
+    "last_checked_utc": "2026-03-11T14:14:29.098Z"
   },
   {
     "portfolio": "Active Capital",
@@ -235,9 +235,9 @@
     "company_careers_url": "https://job-boards.greenhouse.io/zenbusiness",
     "source_type": "greenhouse",
     "status": "ok",
-    "open_roles_raw": 8,
+    "open_roles_raw": 9,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:08.543Z"
+    "last_checked_utc": "2026-03-11T14:14:29.237Z"
   },
   {
     "portfolio": "Active Capital",
@@ -247,7 +247,7 @@
     "status": "ok",
     "open_roles_raw": 1,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:11.716Z"
+    "last_checked_utc": "2026-03-11T14:14:32.195Z"
   },
   {
     "portfolio": "Active Capital",
@@ -257,6 +257,6 @@
     "status": "empty",
     "open_roles_raw": 0,
     "error": "",
-    "last_checked_utc": "2026-03-10T14:10:12.370Z"
+    "last_checked_utc": "2026-03-11T14:14:32.749Z"
   }
 ]
