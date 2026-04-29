@@ -10,7 +10,7 @@
     "source_job_id": "ec98355f2fa0e0c9c5dc79313f70541fa627ef4f",
     "job_key": "breezy:ec98355f2fa0e0c9c5dc79313f70541fa627ef4f",
     "status": "open",
-    "last_seen_utc": "2026-04-28T15:38:41.747Z"
+    "last_seen_utc": "2026-04-29T15:29:08.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -23,7 +23,7 @@
     "source_job_id": "67c6b61bec8d8b7a96583c83778b97b5cca8705a",
     "job_key": "breezy:67c6b61bec8d8b7a96583c83778b97b5cca8705a",
     "status": "open",
-    "last_seen_utc": "2026-04-28T15:38:41.748Z"
+    "last_seen_utc": "2026-04-29T15:29:08.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -36,7 +36,7 @@
     "source_job_id": "8a267ec03561219016a524d4d833268858429377",
     "job_key": "breezy:8a267ec03561219016a524d4d833268858429377",
     "status": "open",
-    "last_seen_utc": "2026-04-28T15:38:41.748Z"
+    "last_seen_utc": "2026-04-29T15:29:08.604Z"
   },
   {
     "portfolio": "Active Capital",
@@ -49,6 +49,6 @@
     "source_job_id": "6ef02d165956a31094943f7424aec27750738a11",
     "job_key": "custom_html:6ef02d165956a31094943f7424aec27750738a11",
     "status": "open",
-    "last_seen_utc": "2026-04-28T15:38:53.259Z"
+    "last_seen_utc": "2026-04-29T15:29:21.107Z"
   }
 ]
